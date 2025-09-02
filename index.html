@@ -3,50 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scala Calculator Pro</title>
-    
-    <!-- PWA Meta Tags -->
-    <meta name="theme-color" content="#667eea">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Scala Calculator Pro">
-    <meta name="description" content="Calcolatore professionale per scale con grandezze fisiche industriali">
-    
-    <!-- PWA Manifest inline per massima compatibilità -->
-    <link rel="manifest" href="data:application/json;charset=utf-8,%7B%22name%22%3A%22Scala%20Calculator%20Pro%22%2C%22short_name%22%3A%22ScalaPro%22%2C%22description%22%3A%22Calcolatore%20professionale%20per%20scale%20con%20grandezze%20fisiche%22%2C%22start_url%22%3A%22.%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23ffffff%22%2C%22theme_color%22%3A%22%23667eea%22%2C%22orientation%22%3A%22portrait%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Fvia.placeholder.com%2F192x192%2F667eea%2Fffffff%3Ftext%3D%F0%9F%93%8A%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fpng%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fvia.placeholder.com%2F512x512%2F667eea%2Fffffff%3Ftext%3D%F0%9F%93%8A%22%2C%22sizes%22%3A%22512x512%22%2C%22type%22%3A%22image%2Fpng%22%7D%5D%7D">
-    
-    <!-- Icons for all platforms -->
-    <link rel="icon" type="image/png" href="https://via.placeholder.com/32x32/667eea/ffffff?text=📊">
-    <link rel="apple-touch-icon" href="https://via.placeholder.com/180x180/667eea/ffffff?text=📊">
-    
+    <title>Convertitore Scale - Misurazioni</title>
+    <meta name="description" content="Converte valori tra diverse scale di misura">
+    <meta name="theme-color" content="#3b82f6">
+    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiQ29udmVydGl0b3JlIFNjYWxlIiwic2hvcnRfbmFtZSI6IlNjYWxlQ29udiIsInN0YXJ0X3VybCI6Ii8iLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsInRoZW1lX2NvbG9yIjoiIzNiODJmNiIsImJhY2tncm91bmRfY29sb3IiOiIjZmZmZmZmIiwiaWNvbnMiOlt7InNyYyI6ImRhdGE6aW1hZ2Uvc3ZnK3htbDtiYXNlNjQsUEhOMlp5QjNhV1IwYUQwaU1USTRJaUJvWldsbmFIUTlJakV5T0NJZ2RtbGxkMEp2ZUQwaU1DQXdJREV5T0NBeU9EZ2lQZ29nUEhCaGRHZ2dabWxzYkQwaUl6TmlPREptTmlJZ1pEMGlUVFkwSURGV1l6QWdNVFl1TnlBeU1DQXhOaTR5Tmpsa2JDQTVOaUF4Tnk0eU1qWkRNVFE0TGpZZ01qSWdNVE00TGpNNUlESTFJRXRNTmkwM1pEY3VOaUEzTGpaaU5DMDNJRGxzTlRnZ05UZ2dPUzQyTGprMUxURXdJREVnTkhZdE1qYzBZeTQ0T0NBNU5UZ2dOVGdzTlRnZ01qY3VOQ0F4TVRJZ01qVTJJRzFzTFRRdU1DNHlOaTQ0SURndU5UUXlhREV3TVhZNFkzUXRMakZPUXkwNE5pQXlMamc1TFRRM0xUUXVNVGdnTTJjeUlDNDJNVVpjSWlCMGNtRnVjMlp2Y20wOUluSnZkR0YwWlNnek5TNDNJREkwSUdOeU16SWdNell5S1NJdlBnb2dQSEJoZEdnZ1ptbHNiRDBpSXpabVpqWm1aaUlnWkQwaVRUWTBJREYyWXpBZ01UWXVOeUF5TUNBME5UWWtMalpkYmprdU5EVXRPUzQ5Tm1waUxWVTJJRGcyTmkweE9DOTZJRzR5T1M0MElEYzRJRE0xYVRJZ01URWhZakZzSWk4K1BDOXpkbWMrIiwic2l6ZXMiOiIxMjh4MTI4IiwidHlwZSI6ImltYWdlL3N2Zyt4bWwifV19">
     <style>
-        :root {
-            --primary: #667eea;
-            --secondary: #764ba2;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --info: #3b82f6;
-            --dark: #1f2937;
-            --light: #f8fafc;
-            --border: #e2e8f0;
-            --text: #334155;
-            --text-light: #64748b;
-            --bg: #ffffff;
-            --shadow: rgba(0, 0, 0, 0.1);
-        }
-
-        [data-theme="dark"] {
-            --primary: #818cf8;
-            --secondary: #a78bfa;
-            --bg: #0f172a;
-            --text: #f1f5f9;
-            --text-light: #94a3b8;
-            --border: #334155;
-            --light: #1e293b;
-            --shadow: rgba(0, 0, 0, 0.3);
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -55,1455 +16,1008 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            color: var(--text);
-            transition: all 0.3s ease;
-            padding: 10px;
+            color: #333;
+            padding: 20px;
         }
 
         .container {
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto;
-            background: var(--bg);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
-            box-shadow: 0 20px 40px var(--shadow);
-            overflow: hidden;
-            animation: slideUp 0.5s ease-out;
-        }
-
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
         }
 
         .header {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 25px 20px;
-            position: relative;
-        }
-
-        .header-controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .theme-toggle, .install-btn {
-            background: rgba(255,255,255,0.2);
-            border: none;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            cursor: pointer;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .theme-toggle:hover, .install-btn:hover {
-            background: rgba(255,255,255,0.3);
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         .header h1 {
-            font-size: 24px;
-            text-align: center;
-            margin-bottom: 8px;
+            color: #3b82f6;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
         }
 
         .header p {
-            font-size: 14px;
-            opacity: 0.9;
-            text-align: center;
+            color: #666;
+            font-size: 1.1em;
         }
 
-        .tabs {
-            display: flex;
-            background: var(--light);
-            border-radius: 12px;
-            padding: 4px;
-            margin: 20px;
-            margin-bottom: 0;
-        }
-
-        .tab {
-            flex: 1;
-            background: none;
-            border: none;
-            padding: 12px 8px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            color: var(--text-light);
-        }
-
-        .tab.active {
-            background: var(--bg);
-            color: var(--primary);
-            box-shadow: 0 2px 8px var(--shadow);
-        }
-
-        .form-container {
-            padding: 25px 20px;
-            display: none;
-        }
-
-        .form-container.active {
-            display: block;
-        }
-
-        .calculation-mode {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            background: var(--light);
-            padding: 8px;
-            border-radius: 12px;
-        }
-
-        .mode-btn {
-            flex: 1;
-            background: none;
-            border: none;
-            padding: 10px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 12px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            color: var(--text-light);
-        }
-
-        .mode-btn.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        .input-group {
-            margin-bottom: 20px;
-        }
-
-        .input-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--text);
-            font-size: 14px;
-        }
-
-        .input-with-unit {
-            display: flex;
-            gap: 10px;
-            align-items: stretch;
-        }
-
-        .input-group input, .input-group select {
-            flex: 1;
-            padding: 15px;
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            background: var(--bg);
-            color: var(--text);
-        }
-
-        .input-group select {
-            min-width: 100px;
-        }
-
-        .input-group input:focus, .input-group select:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        .range-group {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+        .form-group {
             margin-bottom: 25px;
         }
 
-        .btn {
-            padding: 16px 20px;
-            border: none;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary {
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: white;
-            width: 100%;
-            margin-bottom: 15px;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px var(--shadow);
-        }
-
-        .btn-secondary {
-            background: var(--light);
-            color: var(--text);
-            border: 2px solid var(--border);
-        }
-
-        .btn-secondary:hover {
-            background: var(--border);
-        }
-
-        .result-container {
-            margin-top: 25px;
-            display: none;
-            animation: fadeIn 0.5s ease-out;
-        }
-
-        .result-container.show {
+        .form-group label {
             display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #4a5568;
+            font-size: 1.1em;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .result-card {
-            background: linear-gradient(45deg, var(--success), #059669);
-            color: white;
-            padding: 20px;
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e2e8f0;
             border-radius: 12px;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-group select:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .input-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .result-section {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 15px;
+            padding: 25px;
+            color: white;
+            margin-top: 30px;
             text-align: center;
+        }
+
+        .result-section h3 {
+            font-size: 1.4em;
             margin-bottom: 15px;
-        }
-
-        .result-card.warning {
-            background: linear-gradient(45deg, var(--warning), #d97706);
-        }
-
-        .result-card h3 {
-            font-size: 16px;
-            margin-bottom: 10px;
-            opacity: 0.9;
         }
 
         .result-value {
-            font-size: 28px;
+            font-size: 2.2em;
             font-weight: bold;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-            word-break: break-all;
-            margin-bottom: 8px;
-        }
-
-        .result-unit {
-            font-size: 16px;
-            opacity: 0.8;
-        }
-
-        .formula-display {
-            background: var(--light);
-            padding: 15px;
-            border-radius: 8px;
-            font-family: 'SF Mono', Monaco, monospace;
-            font-size: 12px;
-            color: var(--text-light);
-            border-left: 4px solid var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .presets {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .preset-btn {
-            padding: 12px;
-            background: var(--light);
-            border: 2px solid var(--border);
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
-            color: var(--text);
-        }
-
-        .preset-btn:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-
-        .error, .warning, .success {
-            padding: 15px;
-            border-radius: 8px;
             margin: 15px 0;
-            text-align: center;
-            display: none;
-            animation: shake 0.5s ease-out;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        .error { background: linear-gradient(45deg, var(--danger), #dc2626); color: white; }
-        .warning { background: linear-gradient(45deg, var(--warning), #d97706); color: white; }
-        .success { background: linear-gradient(45deg, var(--success), #059669); color: white; }
-
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
+        .result-details {
+            font-size: 1em;
+            opacity: 0.9;
+            margin-top: 15px;
         }
 
-        .status-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0,0,0,0.9);
+        .convert-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #10b981, #059669);
             color: white;
-            padding: 12px;
-            text-align: center;
-            font-size: 14px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-            z-index: 1000;
+            border: none;
+            padding: 18px;
+            border-radius: 12px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 0;
         }
 
-        .status-bar.show {
+        .convert-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+        }
+
+        .convert-btn:active {
             transform: translateY(0);
         }
 
-        .advanced-options {
-            background: var(--light);
+        .unit-info {
+            background: #f8fafc;
+            border-radius: 10px;
             padding: 15px;
-            border-radius: 12px;
-            margin-top: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #3b82f6;
         }
 
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin: 10px 0;
+        .unit-info strong {
+            color: #3b82f6;
         }
 
-        .checkbox-group input[type="checkbox"] {
-            width: 18px;
-            height: 18px;
-            accent-color: var(--primary);
-        }
-
-        .precision-control {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .error {
+            background: #fee2e2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 15px;
+            border-radius: 10px;
             margin: 15px 0;
         }
 
-        .precision-control input[type="range"] {
-            flex: 1;
-            accent-color: var(--primary);
+        .preset-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 15px 0;
         }
 
-        @media (max-width: 480px) {
-            .container {
-                margin: 5px;
-                max-width: none;
-            }
-            
-            .range-group {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .result-value {
-                font-size: 22px;
-            }
-
-            .presets {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .tabs {
-                margin: 15px 10px 0;
-            }
-
-            .tab {
-                font-size: 12px;
-                padding: 10px 6px;
-            }
+        .preset-btn {
+            background: #e5e7eb;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
 
-        @media (display-mode: standalone) {
-            body { padding-top: 20px; }
+        .preset-btn:hover {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .help-text {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            color: #92400e;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+
+        .help-text strong {
+            color: #78350f;
         }
 
         .history-item {
-            background: var(--light);
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
             padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            border-left: 4px solid var(--primary);
+            margin: 10px 0;
+            font-size: 0.95em;
+            position: relative;
+            transition: all 0.2s ease;
         }
 
-        .history-item .timestamp {
-            font-size: 12px;
-            color: var(--text-light);
-            margin-bottom: 5px;
+        .history-item:hover {
+            background: #f1f5f9;
+            border-color: #3b82f6;
         }
 
-        .history-item .calculation {
-            font-size: 14px;
-            color: var(--text);
+        .history-timestamp {
+            color: #64748b;
+            font-size: 0.8em;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+        }
+
+        .history-content {
+            margin-right: 80px;
+        }
+
+        .history-result {
+            font-weight: 600;
+            color: #3b82f6;
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+
+        .history-details {
+            color: #64748b;
+            font-size: 0.9em;
+        }
+
+        .history-empty {
+            text-align: center;
+            color: #64748b;
+            padding: 30px;
+            font-style: italic;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .input-group {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="header-controls">
-                <button class="theme-toggle" id="themeToggle">🌙</button>
-                <button class="install-btn" id="installButton" style="display:none;">📱 Installa</button>
-            </div>
-            <h1>📊 Scala Calculator Pro</h1>
-            <p>Calcolatore professionale con grandezze fisiche</p>
-        </div>
-        
-        <div class="tabs">
-            <button class="tab active" id="calcTab">🧮 Calcolatore</button>
-            <button class="tab" id="historyTab">📈 Cronologia</button>
-            <button class="tab" id="converterTab">🔄 Convertitore</button>
+            <h1>⚖️ Convertitore Scale</h1>
+            <p>Converti valori tra diverse scale di misura</p>
         </div>
 
-        <!-- CALCULATOR TAB -->
-        <div id="calculator" class="form-container active">
-            <div class="calculation-mode">
-                <button class="mode-btn active" id="directMode">Diretto</button>
-                <button class="mode-btn" id="inverseMode">Inverso</button>
-                <button class="mode-btn" id="findScaleMode">Trova Scala</button>
+        <form id="converterForm">
+            <div class="form-group">
+                <label for="physicalQuantity">Grandezza Fisica:</label>
+                <select id="physicalQuantity" required>
+                    <option value="">Seleziona una grandezza...</option>
+                    <option value="temperature">Temperatura</option>
+                    <option value="pressure">Pressione</option>
+                    <option value="voltage">Tensione Elettrica</option>
+                    <option value="current">Corrente Elettrica</option>
+                    <option value="flow">Portata</option>
+                    <option value="level">Livello</option>
+                    <option value="speed">Velocità</option>
+                    <option value="force">Forza</option>
+                    <option value="power">Potenza</option>
+                    <option value="frequency">Frequenza</option>
+                    <option value="signal420ma">Segnale 4-20mA</option>
+                    <option value="signal010v">Segnale 0-10V</option>
+                </select>
             </div>
 
-            <div class="presets">
-                <button class="preset-btn" id="tempPreset">🌡️ Temperatura</button>
-                <button class="preset-btn" id="pressPreset">🔧 Pressione</button>
-                <button class="preset-btn" id="voltPreset">⚡ Tensione</button>
-                <button class="preset-btn" id="percPreset">📊 Percentuale</button>
+            <div class="form-group">
+                <label>⚙️ Opzioni Avanzate:</label>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 10px;">
+                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="checkbox" id="enableUnitConversion" checked>
+                        <span>🔄 Converti unità di misura automaticamente</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="checkbox" id="enableHistory" checked>
+                        <span>📋 Salva cronologia calcoli</span>
+                    </label>
+                </div>
             </div>
 
-            <!-- DIRECT MODE -->
-            <div id="direct-inputs">
+            <div class="form-group">
+                <label>Scale di Misura:</label>
                 <div class="input-group">
-                    <label for="valore">Valore da scalare:</label>
-                    <div class="input-with-unit">
-                        <input type="number" id="valore" step="any" placeholder="Inserisci valore" inputmode="decimal">
-                        <select id="input-unit">
-                            <option value="">-- Unità --</option>
-                            <option value="°C">°C</option>
-                            <option value="K">K</option>
-                            <option value="°F">°F</option>
-                            <option value="Pa">Pa</option>
-                            <option value="bar">bar</option>
-                            <option value="psi">psi</option>
-                            <option value="V">V</option>
-                            <option value="mV">mV</option>
-                            <option value="A">A</option>
-                            <option value="mA">mA</option>
-                            <option value="%">%</option>
-                            <option value="m">m</option>
-                            <option value="cm">cm</option>
-                            <option value="mm">mm</option>
+                    <div>
+                        <label for="inputUnit">Da:</label>
+                        <select id="inputUnit" required>
+                            <option value="">Seleziona unità...</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="outputUnit">A:</label>
+                        <select id="outputUnit" required>
+                            <option value="">Seleziona unità...</option>
                         </select>
                     </div>
                 </div>
-
-                <div class="range-group">
-                    <div class="input-group">
-                        <label for="v_min">V min (originale):</label>
-                        <input type="number" id="v_min" step="any" placeholder="0" inputmode="decimal">
-                    </div>
-                    <div class="input-group">
-                        <label for="v_max">V max (originale):</label>
-                        <input type="number" id="v_max" step="any" placeholder="100" inputmode="decimal">
-                    </div>
-                </div>
-
-                <div class="range-group">
-                    <div class="input-group">
-                        <label for="fondo_min">Scala min (target):</label>
-                        <div class="input-with-unit">
-                            <input type="number" id="fondo_min" step="any" placeholder="4" inputmode="decimal">
-                            <select id="output-unit">
-                                <option value="">-- Unità --</option>
-                                <option value="mA">mA</option>
-                                <option value="V">V</option>
-                                <option value="%">%</option>
-                                <option value="digit">digit</option>
-                                <option value="count">count</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <label for="fondo_max">Scala max (target):</label>
-                        <input type="number" id="fondo_max" step="any" placeholder="20" inputmode="decimal">
-                    </div>
-                </div>
             </div>
 
-            <!-- INVERSE MODE -->
-            <div id="inverse-inputs" style="display: none;">
+            <div class="form-group">
+                <label>Scala di Input:</label>
                 <div class="input-group">
-                    <label for="valore_scalato">Valore scalato ricevuto:</label>
-                    <div class="input-with-unit">
-                        <input type="number" id="valore_scalato" step="any" placeholder="Es: 12" inputmode="decimal">
-                        <select id="scaled-unit">
-                            <option value="">-- Unità --</option>
-                            <option value="mA">mA</option>
-                            <option value="V">V</option>
-                            <option value="%">%</option>
-                            <option value="digit">digit</option>
-                        </select>
+                    <div>
+                        <label for="inputMin">Valore Minimo:</label>
+                        <input type="number" id="inputMin" step="any" required>
                     </div>
-                </div>
-
-                <div class="range-group">
-                    <div class="input-group">
-                        <label for="v_min_inv">V min (originale):</label>
-                        <input type="number" id="v_min_inv" step="any" placeholder="0" inputmode="decimal">
-                    </div>
-                    <div class="input-group">
-                        <label for="v_max_inv">V max (originale):</label>
-                        <input type="number" id="v_max_inv" step="any" placeholder="100" inputmode="decimal">
-                    </div>
-                </div>
-
-                <div class="range-group">
-                    <div class="input-group">
-                        <label for="fondo_min_inv">Scala min:</label>
-                        <input type="number" id="fondo_min_inv" step="any" placeholder="4" inputmode="decimal">
-                    </div>
-                    <div class="input-group">
-                        <label for="fondo_max_inv">Scala max:</label>
-                        <input type="number" id="fondo_max_inv" step="any" placeholder="20" inputmode="decimal">
+                    <div>
+                        <label for="inputMax">Valore Massimo:</label>
+                        <input type="number" id="inputMax" step="any" required>
                     </div>
                 </div>
             </div>
 
-            <!-- FIND SCALE MODE -->
-            <div id="find-scale-inputs" style="display: none;">
+            <div class="form-group">
+                <label>Fondo Scala:</label>
                 <div class="input-group">
-                    <label for="valore_find">Valore originale noto:</label>
-                    <div class="input-with-unit">
-                        <input type="number" id="valore_find" step="any" placeholder="Es: 50" inputmode="decimal">
-                        <select id="find-input-unit">
-                            <option value="">-- Unità --</option>
-                            <option value="°C">°C</option>
-                            <option value="Pa">Pa</option>
-                            <option value="V">V</option>
-                            <option value="%">%</option>
-                        </select>
+                    <div>
+                        <label for="outputMin">Valore Minimo:</label>
+                        <input type="number" id="outputMin" step="any">
                     </div>
-                </div>
-
-                <div class="input-group">
-                    <label for="valore_scalato_find">Valore scalato desiderato:</label>
-                    <div class="input-with-unit">
-                        <input type="number" id="valore_scalato_find" step="any" placeholder="Es: 12" inputmode="decimal">
-                        <select id="find-output-unit">
-                            <option value="">-- Unità --</option>
-                            <option value="mA">mA</option>
-                            <option value="V">V</option>
-                            <option value="%">%</option>
-                        </select>
+                    <div>
+                        <label for="outputMax">Valore Massimo:</label>
+                        <input type="number" id="outputMax" step="any">
                     </div>
-                </div>
-
-                <div class="range-group">
-                    <div class="input-group">
-                        <label for="v_min_find">V min:</label>
-                        <input type="number" id="v_min_find" step="any" placeholder="0" inputmode="decimal">
-                    </div>
-                    <div class="input-group">
-                        <label for="v_max_find">V max:</label>
-                        <input type="number" id="v_max_find" step="any" placeholder="100" inputmode="decimal">
-                    </div>
-                </div>
-
-                <div class="input-group">
-                    <label for="fondo_min_find">Scala min fissa:</label>
-                    <input type="number" id="fondo_min_find" step="any" placeholder="4" inputmode="decimal">
                 </div>
             </div>
 
-            <div class="advanced-options">
-                <h4>⚙️ Opzioni Avanzate</h4>
-                <div class="precision-control">
-                    <label>Precisione decimali:</label>
-                    <input type="range" id="precision" min="0" max="8" value="3">
-                    <span id="precision-value">3</span>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="scientific-notation">
-                    <label for="scientific-notation">Notazione scientifica</label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="show-formula">
-                    <label for="show-formula">Mostra formula</label>
-                </div>
+            <div class="form-group">
+                <label for="calculationType">Tipo di Calcolo:</label>
+                <select id="calculationType" required>
+                    <option value="direct">Conversione Diretta (Valore → Fondo Scala)</option>
+                    <option value="inverse">Formula Inversa (Fondo Scala → Valore Max)</option>
+                </select>
             </div>
 
-            <button class="btn btn-primary" id="calculateBtn">
-                🧮 Calcola
-            </button>
-
-            <div id="result-container" class="result-container">
-                <div id="result-card" class="result-card">
-                    <h3 id="result-title">Risultato:</h3>
-                    <div class="result-value" id="result-value">0</div>
-                    <div class="result-unit" id="result-unit"></div>
-                </div>
-                
-                <div id="formula-display" class="formula-display" style="display: none;">
-                    <strong>Formula utilizzata:</strong><br>
-                    <span id="formula-text"></span>
-                </div>
-
-                <div style="display: flex; gap: 10px; margin-top: 15px;">
-                    <button class="btn btn-secondary" id="copyBtn" style="flex: 1;">📋 Copia</button>
-                    <button class="btn btn-secondary" id="saveBtn" style="flex: 1;">💾 Salva</button>
-                </div>
+            <div id="directInputs" class="form-group">
+                <label for="inputValue">Valore da Convertire:</label>
+                <input type="number" id="inputValue" step="any" placeholder="Inserisci il valore...">
+                <div class="preset-buttons" id="presetButtons"></div>
             </div>
 
-            <div id="error" class="error"></div>
-            <div id="warning" class="warning"></div>
-            <div id="success" class="success"></div>
+            <div id="inverseInputs" class="form-group" style="display: none;">
+                <label for="desiredOutput">Valore Desiderato sul Fondo Scala:</label>
+                <input type="number" id="desiredOutput" step="any" placeholder="Valore che vuoi ottenere...">
+                <small style="color: #666; font-size: 0.9em;">Inserisci il valore che vuoi ottenere sul fondo scala per calcolare il valore massimo necessario nella scala di input</small>
+            </div>
 
-            <button class="btn btn-secondary" id="clearBtn" style="width: 100%; margin-top: 15px;">
-                🗑️ Cancella tutto
-            </button>
+            <div id="calculationHelp" class="help-text" style="display: none;">
+                <strong>💡 Formula Inversa:</strong> Questa modalità ti permette di calcolare quale deve essere il valore massimo della scala di input per ottenere un valore specifico sul fondo scala. Utile per dimensionare strumenti e sensori.
+            </div>
+
+            <button type="submit" class="convert-btn" id="convertBtn">🔄 Converti Valore</button>
+        </form>
+
+        <div id="result" class="result-section" style="display: none;">
+            <h3>Risultato della Conversione</h3>
+            <div class="result-value" id="resultValue">--</div>
+            <div class="result-details" id="resultDetails">--</div>
+            <div class="unit-info" id="unitInfo"></div>
         </div>
 
-        <!-- HISTORY TAB -->
-        <div id="history" class="form-container">
-            <div style="display: flex; gap: 10px; margin-bottom: 20px;">
-                <button class="btn btn-secondary" id="clearHistoryBtn" style="flex: 1;">🗑️ Cancella</button>
-                <button class="btn btn-secondary" id="exportHistoryBtn" style="flex: 1;">📤 Esporta</button>
-            </div>
-            <div id="history-list">
-                <p style="text-align: center; color: var(--text-light); padding: 40px;">
-                    📭 Nessun calcolo salvato
-                </p>
-            </div>
-        </div>
+        <div id="error" class="error" style="display: none;"></div>
 
-        <!-- CONVERTER TAB -->
-        <div id="converter" class="form-container">
-            <div style="background: var(--light); padding: 15px; border-radius: 12px;">
-                <h4>🔄 Convertitore Unità</h4>
-                <div class="input-group">
-                    <label>Da:</label>
-                    <div class="input-with-unit">
-                        <input type="number" id="convert-from" step="any" placeholder="Valore" inputmode="decimal">
-                        <select id="convert-from-unit">
-                            <option value="celsius">°C</option>
-                            <option value="kelvin">K</option>
-                            <option value="fahrenheit">°F</option>
-                            <option value="pascal">Pa</option>
-                            <option value="bar">bar</option>
-                            <option value="psi">psi</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="input-group">
-                    <label>A:</label>
-                    <div class="input-with-unit">
-                        <input type="number" id="convert-to" readonly placeholder="Risultato">
-                        <select id="convert-to-unit">
-                            <option value="celsius">°C</option>
-                            <option value="kelvin">K</option>
-                            <option value="fahrenheit">°F</option>
-                            <option value="pascal">Pa</option>
-                            <option value="bar">bar</option>
-                            <option value="psi">psi</option>
-                        </select>
-                    </div>
-                </div>
-                <button class="btn btn-primary" id="convertBtn">🔄 Converti</button>
-                <div id="conversion-result" style="background: var(--bg); padding: 12px; border-radius: 8px; border: 2px solid var(--border); font-family: monospace; font-size: 14px; color: var(--text); margin-top: 15px; display: none;">
-                    Risultato conversione
-                </div>
+        <!-- Cronologia -->
+        <div id="historySection" style="margin-top: 30px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <h3 style="color: #3b82f6; margin: 0;">📋 Cronologia Calcoli</h3>
+                <button id="clearHistory" style="background: #ef4444; color: white; border: none; padding: 8px 15px; border-radius: 8px; cursor: pointer; font-size: 0.9em;">🗑️ Cancella</button>
             </div>
+            <div id="historyList" style="max-height: 300px; overflow-y: auto;"></div>
         </div>
-    </div>
-
-    <div id="statusBar" class="status-bar">
-        <span id="statusText">Scala Calculator Pro pronto! 🚀</span>
     </div>
 
     <script>
-        // Global variables
-        let deferredPrompt;
-        let isStandalone = false;
-        let currentMode = 'direct';
-        let currentTheme = localStorage.getItem('theme') || 'light';
-        let calculationHistory = JSON.parse(localStorage.getItem('calculationHistory') || '[]');
-        let currentResult = null;
-
-        // Predefined scales for different applications
-        const presets = {
+        const physicalQuantities = {
             temperature: {
                 name: 'Temperatura',
-                v_min: 0, v_max: 100,
-                fondo_min: 4, fondo_max: 20,
-                input_unit: '°C', output_unit: 'mA',
-                description: '0-100°C → 4-20mA'
+                units: {
+                    celsius: { name: 'Celsius (°C)', symbol: '°C' },
+                    fahrenheit: { name: 'Fahrenheit (°F)', symbol: '°F' },
+                    kelvin: { name: 'Kelvin (K)', symbol: 'K' },
+                    rankine: { name: 'Rankine (°R)', symbol: '°R' }
+                },
+                presets: {
+                    'Acqua (0-100°C)': { min: 0, max: 100, unit: 'celsius' },
+                    'Ambiente (15-30°C)': { min: 15, max: 30, unit: 'celsius' },
+                    'Freezer (-20-0°C)': { min: -20, max: 0, unit: 'celsius' }
+                }
             },
             pressure: {
                 name: 'Pressione',
-                v_min: 0, v_max: 10,
-                fondo_min: 4, fondo_max: 20,
-                input_unit: 'bar', output_unit: 'mA',
-                description: '0-10 bar → 4-20mA'
+                units: {
+                    bar: { name: 'Bar', symbol: 'bar' },
+                    psi: { name: 'PSI', symbol: 'psi' },
+                    pascal: { name: 'Pascal (Pa)', symbol: 'Pa' },
+                    mmhg: { name: 'mmHg', symbol: 'mmHg' },
+                    atm: { name: 'Atmosfere (atm)', symbol: 'atm' }
+                },
+                presets: {
+                    'Atmosferica (0.8-1.2 bar)': { min: 0.8, max: 1.2, unit: 'bar' },
+                    'Pneumatici (2-3 bar)': { min: 2, max: 3, unit: 'bar' },
+                    'Caldaia (1-6 bar)': { min: 1, max: 6, unit: 'bar' }
+                }
             },
             voltage: {
-                name: 'Tensione',
-                v_min: 0, v_max: 10,
-                fondo_min: 0, fondo_max: 100,
-                input_unit: 'V', output_unit: '%',
-                description: '0-10V → 0-100%'
+                name: 'Tensione Elettrica',
+                units: {
+                    volt: { name: 'Volt (V)', symbol: 'V' },
+                    millivolt: { name: 'Millivolt (mV)', symbol: 'mV' },
+                    kilovolt: { name: 'Kilovolt (kV)', symbol: 'kV' }
+                },
+                presets: {
+                    'Batteria (0-12V)': { min: 0, max: 12, unit: 'volt' },
+                    'Domestico (220-240V)': { min: 220, max: 240, unit: 'volt' },
+                    'Sensore (0-5V)': { min: 0, max: 5, unit: 'volt' }
+                }
             },
-            percentage: {
-                name: 'Percentuale',
-                v_min: 0, v_max: 100,
-                fondo_min: 0, fondo_max: 4095,
-                input_unit: '%', output_unit: 'digit',
-                description: '0-100% → 0-4095 digit'
+            current: {
+                name: 'Corrente Elettrica',
+                units: {
+                    ampere: { name: 'Ampere (A)', symbol: 'A' },
+                    milliampere: { name: 'Milliampere (mA)', symbol: 'mA' },
+                    microampere: { name: 'Microampere (μA)', symbol: 'μA' }
+                },
+                presets: {
+                    'LED (10-30 mA)': { min: 10, max: 30, unit: 'milliampere' },
+                    'Casa (0-20A)': { min: 0, max: 20, unit: 'ampere' },
+                    'Sensore (4-20 mA)': { min: 4, max: 20, unit: 'milliampere' }
+                }
+            },
+            flow: {
+                name: 'Portata',
+                units: {
+                    lmin: { name: 'Litri/min (L/min)', symbol: 'L/min' },
+                    m3h: { name: 'm³/h', symbol: 'm³/h' },
+                    gpm: { name: 'Galloni/min (GPM)', symbol: 'GPM' },
+                    lh: { name: 'Litri/h (L/h)', symbol: 'L/h' }
+                },
+                presets: {
+                    'Rubinetto (5-15 L/min)': { min: 5, max: 15, unit: 'lmin' },
+                    'Doccia (8-20 L/min)': { min: 8, max: 20, unit: 'lmin' },
+                    'Irrigazione (1-5 m³/h)': { min: 1, max: 5, unit: 'm3h' }
+                }
+            },
+            level: {
+                name: 'Livello',
+                units: {
+                    meter: { name: 'Metri (m)', symbol: 'm' },
+                    centimeter: { name: 'Centimetri (cm)', symbol: 'cm' },
+                    millimeter: { name: 'Millimetri (mm)', symbol: 'mm' },
+                    percent: { name: 'Percentuale (%)', symbol: '%' }
+                },
+                presets: {
+                    'Serbatoio (0-100%)': { min: 0, max: 100, unit: 'percent' },
+                    'Piscina (0.5-2.5 m)': { min: 0.5, max: 2.5, unit: 'meter' },
+                    'Cisterna (0-300 cm)': { min: 0, max: 300, unit: 'centimeter' }
+                }
+            },
+            speed: {
+                name: 'Velocità',
+                units: {
+                    kmh: { name: 'km/h', symbol: 'km/h' },
+                    ms: { name: 'm/s', symbol: 'm/s' },
+                    mph: { name: 'mph', symbol: 'mph' },
+                    rpm: { name: 'RPM', symbol: 'RPM' }
+                },
+                presets: {
+                    'Auto (0-200 km/h)': { min: 0, max: 200, unit: 'kmh' },
+                    'Vento (0-30 m/s)': { min: 0, max: 30, unit: 'ms' },
+                    'Motore (0-6000 RPM)': { min: 0, max: 6000, unit: 'rpm' }
+                }
+            },
+            force: {
+                name: 'Forza',
+                units: {
+                    newton: { name: 'Newton (N)', symbol: 'N' },
+                    kilonewton: { name: 'Kilonewton (kN)', symbol: 'kN' },
+                    dyne: { name: 'Dine', symbol: 'dyn' },
+                    kgf: { name: 'Chilogrammo-forza (kgf)', symbol: 'kgf' }
+                },
+                presets: {
+                    'Peso persona (500-1000 N)': { min: 500, max: 1000, unit: 'newton' },
+                    'Carico (0-50 kN)': { min: 0, max: 50, unit: 'kilonewton' }
+                }
+            },
+            power: {
+                name: 'Potenza',
+                units: {
+                    watt: { name: 'Watt (W)', symbol: 'W' },
+                    kilowatt: { name: 'Kilowatt (kW)', symbol: 'kW' },
+                    horsepower: { name: 'Cavalli (HP)', symbol: 'HP' },
+                    milliwatt: { name: 'Milliwatt (mW)', symbol: 'mW' }
+                },
+                presets: {
+                    'Lampadina (5-100 W)': { min: 5, max: 100, unit: 'watt' },
+                    'Elettrodomestico (0.5-3 kW)': { min: 0.5, max: 3, unit: 'kilowatt' },
+                    'Motore (1-200 HP)': { min: 1, max: 200, unit: 'horsepower' }
+                }
+            },
+            frequency: {
+                name: 'Frequenza',
+                units: {
+                    hertz: { name: 'Hertz (Hz)', symbol: 'Hz' },
+                    kilohertz: { name: 'Kilohertz (kHz)', symbol: 'kHz' },
+                    megahertz: { name: 'Megahertz (MHz)', symbol: 'MHz' },
+                    gigahertz: { name: 'Gigahertz (GHz)', symbol: 'GHz' }
+                },
+                presets: {
+                    'Audio (20-20000 Hz)': { min: 20, max: 20000, unit: 'hertz' },
+                    'Radio FM (88-108 MHz)': { min: 88, max: 108, unit: 'megahertz' },
+                    'Rete elettrica (50-60 Hz)': { min: 50, max: 60, unit: 'hertz' }
+                }
+            },
+            signal420ma: {
+                name: 'Segnale 4-20mA',
+                units: {
+                    ma420: { name: '4-20 mA', symbol: 'mA', min: 4, max: 20 },
+                    percent: { name: 'Percentuale (%)', symbol: '%' },
+                    normalized: { name: 'Normalizzato (0-1)', symbol: '' }
+                },
+                presets: {
+                    'Standard 4-20mA': { min: 4, max: 20, unit: 'ma420' },
+                    'Percentuale 0-100%': { min: 0, max: 100, unit: 'percent' },
+                    'Normalizzato 0-1': { min: 0, max: 1, unit: 'normalized' }
+                }
+            },
+            signal010v: {
+                name: 'Segnale 0-10V',
+                units: {
+                    v010: { name: '0-10 V', symbol: 'V', min: 0, max: 10 },
+                    v05: { name: '0-5 V', symbol: 'V', min: 0, max: 5 },
+                    percent: { name: 'Percentuale (%)', symbol: '%' },
+                    normalized: { name: 'Normalizzato (0-1)', symbol: '' }
+                },
+                presets: {
+                    'Standard 0-10V': { min: 0, max: 10, unit: 'v010' },
+                    'Standard 0-5V': { min: 0, max: 5, unit: 'v05' },
+                    'Percentuale 0-100%': { min: 0, max: 100, unit: 'percent' }
+                }
             }
         };
 
-        // Unit conversions
+        // Unit conversion factors
         const unitConversions = {
-            celsius: {
-                kelvin: (c) => c + 273.15,
-                fahrenheit: (c) => c * 9/5 + 32
+            temperature: {
+                celsius: { factor: 1, offset: 0 },
+                fahrenheit: { 
+                    toBase: function(f) { return (f - 32) * 5/9; },
+                    fromBase: function(c) { return c * 9/5 + 32; }
+                },
+                kelvin: { factor: 1, offset: 273.15 },
+                rankine: { 
+                    toBase: function(r) { return (r - 491.67) * 5/9; },
+                    fromBase: function(c) { return (c + 273.15) * 9/5; }
+                }
             },
-            kelvin: {
-                celsius: (k) => k - 273.15,
-                fahrenheit: (k) => (k - 273.15) * 9/5 + 32
+            pressure: {
+                bar: { factor: 1 },
+                psi: { factor: 0.0689476 },
+                pascal: { factor: 0.00001 },
+                mmhg: { factor: 0.00133322 },
+                atm: { factor: 1.01325 }
             },
-            fahrenheit: {
-                celsius: (f) => (f - 32) * 5/9,
-                kelvin: (f) => (f - 32) * 5/9 + 273.15
+            voltage: {
+                volt: { factor: 1 },
+                millivolt: { factor: 0.001 },
+                kilovolt: { factor: 1000 }
             },
-            pascal: {
-                bar: (p) => p / 100000,
-                psi: (p) => p / 6895
+            current: {
+                ampere: { factor: 1 },
+                milliampere: { factor: 0.001 },
+                microampere: { factor: 0.000001 }
             },
-            bar: {
-                pascal: (b) => b * 100000,
-                psi: (b) => b * 14.5038
+            flow: {
+                lmin: { factor: 1 },
+                m3h: { factor: 60 },
+                gpm: { factor: 0.264172 },
+                lh: { factor: 0.0166667 }
             },
-            psi: {
-                pascal: (p) => p * 6895,
-                bar: (p) => p / 14.5038
+            level: {
+                meter: { factor: 1 },
+                centimeter: { factor: 0.01 },
+                millimeter: { factor: 0.001 },
+                percent: { factor: 1 }
+            },
+            speed: {
+                kmh: { factor: 1 },
+                ms: { factor: 3.6 },
+                mph: { factor: 0.621371 },
+                rpm: { factor: 1 }
+            },
+            force: {
+                newton: { factor: 1 },
+                kilonewton: { factor: 1000 },
+                dyne: { factor: 0.00001 },
+                kgf: { factor: 9.80665 }
+            },
+            power: {
+                watt: { factor: 1 },
+                kilowatt: { factor: 1000 },
+                horsepower: { factor: 745.7 },
+                milliwatt: { factor: 0.001 }
+            },
+            frequency: {
+                hertz: { factor: 1 },
+                kilohertz: { factor: 1000 },
+                megahertz: { factor: 1000000 },
+                gigahertz: { factor: 1000000000 }
             }
         };
 
-        // Initialize app
-        function initApp() {
-            try {
-                loadTheme();
-                setupEventListeners();
-                restoreSession();
-                
-                // Check if PWA
-                if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
-                    isStandalone = true;
-                }
+        // Variables
+        const physicalQuantitySelect = document.getElementById('physicalQuantity');
+        const inputUnitSelect = document.getElementById('inputUnit');
+        const outputUnitSelect = document.getElementById('outputUnit');
+        const presetButtons = document.getElementById('presetButtons');
+        const calculationTypeSelect = document.getElementById('calculationType');
+        const directInputs = document.getElementById('directInputs');
+        const inverseInputs = document.getElementById('inverseInputs');
+        const convertBtn = document.getElementById('convertBtn');
+        const enableUnitConversion = document.getElementById('enableUnitConversion');
+        const enableHistory = document.getElementById('enableHistory');
+        const historyList = document.getElementById('historyList');
+        const clearHistoryBtn = document.getElementById('clearHistory');
+        const form = document.getElementById('converterForm');
+        const resultSection = document.getElementById('result');
+        const errorDiv = document.getElementById('error');
 
-                // Service Worker
-                if ('serviceWorker' in navigator) {
-                    const swCode = `
-                        const CACHE_NAME = 'scala-calc-v1';
-                        const urlsToCache = ['./'];
-                        
-                        self.addEventListener('install', event => {
-                            event.waitUntil(
-                                caches.open(CACHE_NAME).then(cache => {
-                                    return cache.addAll(urlsToCache);
-                                })
-                            );
-                        });
-                        
-                        self.addEventListener('fetch', event => {
-                            event.respondWith(
-                                caches.match(event.request).then(response => {
-                                    return response || fetch(event.request);
-                                })
-                            );
-                        });
-                    `;
-                    
-                    const blob = new Blob([swCode], { type: 'application/javascript' });
-                    const swUrl = URL.createObjectURL(blob);
-                    
-                    navigator.serviceWorker.register(swUrl)
-                        .then(() => console.log('SW registered'))
-                        .catch(() => console.log('SW failed'));
-                }
+        // History
+        let calculationHistory = JSON.parse(localStorage.getItem('scaleConverterHistory') || '[]');
 
-                // PWA install prompt
-                window.addEventListener('beforeinstallprompt', (e) => {
-                    e.preventDefault();
-                    deferredPrompt = e;
-                    if (!isStandalone) {
-                        document.getElementById('installButton').style.display = 'block';
-                    }
+        // Initialize
+        updateHistoryDisplay();
+
+        // Event listeners
+        physicalQuantitySelect.addEventListener('change', function() {
+            const selectedQuantity = this.value;
+            updateUnitSelects(selectedQuantity);
+            updatePresetButtons(selectedQuantity);
+        });
+
+        calculationTypeSelect.addEventListener('change', function() {
+            const calculationType = this.value;
+            const helpText = document.getElementById('calculationHelp');
+            
+            if (calculationType === 'direct') {
+                directInputs.style.display = 'block';
+                inverseInputs.style.display = 'none';
+                helpText.style.display = 'none';
+                convertBtn.textContent = '🔄 Converti Valore';
+                document.getElementById('inputValue').required = true;
+                document.getElementById('desiredOutput').required = false;
+                document.getElementById('outputMin').required = true;
+                document.getElementById('outputMax').required = true;
+            } else {
+                directInputs.style.display = 'none';
+                inverseInputs.style.display = 'block';
+                helpText.style.display = 'block';
+                convertBtn.textContent = '🔍 Calcola Fondo Scala Max';
+                document.getElementById('inputValue').required = false;
+                document.getElementById('desiredOutput').required = true;
+                document.getElementById('outputMin').required = true;
+                document.getElementById('outputMax').required = false;
+            }
+        });
+
+        clearHistoryBtn.addEventListener('click', function() {
+            if (confirm('Sei sicuro di voler cancellare tutta la cronologia?')) {
+                calculationHistory = [];
+                localStorage.removeItem('scaleConverterHistory');
+                updateHistoryDisplay();
+            }
+        });
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            convertScale();
+        });
+
+        // Functions
+        function updateUnitSelects(quantityKey) {
+            inputUnitSelect.innerHTML = '<option value="">Seleziona unità...</option>';
+            outputUnitSelect.innerHTML = '<option value="">Seleziona unità...</option>';
+
+            if (quantityKey && physicalQuantities[quantityKey]) {
+                const units = physicalQuantities[quantityKey].units;
+                Object.entries(units).forEach(function(entry) {
+                    const key = entry[0];
+                    const unit = entry[1];
+                    const option1 = new Option(unit.name, key);
+                    const option2 = new Option(unit.name, key);
+                    inputUnitSelect.add(option1);
+                    outputUnitSelect.add(option2);
                 });
-
-                showStatus('Scala Calculator Pro pronto! 🚀');
-            } catch (error) {
-                console.error('Init error:', error);
             }
         }
 
-        function setupEventListeners() {
-            // Theme toggle
-            document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+        function updatePresetButtons(quantityKey) {
+            presetButtons.innerHTML = '';
 
-            // Install button
-            document.getElementById('installButton').addEventListener('click', async () => {
-                if (deferredPrompt) {
-                    try {
-                        deferredPrompt.prompt();
-                        const { outcome } = await deferredPrompt.userChoice;
-                        if (outcome === 'accepted') {
-                            showStatus('App installata! 🎉');
-                            document.getElementById('installButton').style.display = 'none';
-                        }
-                        deferredPrompt = null;
-                    } catch (error) {
-                        showError('Errore installazione');
+            if (quantityKey && physicalQuantities[quantityKey] && physicalQuantities[quantityKey].presets) {
+                const presets = physicalQuantities[quantityKey].presets;
+                Object.entries(presets).forEach(function(entry) {
+                    const name = entry[0];
+                    const preset = entry[1];
+                    const button = document.createElement('button');
+                    button.type = 'button';
+                    button.className = 'preset-btn';
+                    button.textContent = name;
+                    button.addEventListener('click', function() {
+                        document.getElementById('inputMin').value = preset.min;
+                        document.getElementById('inputMax').value = preset.max;
+                        inputUnitSelect.value = preset.unit;
+                    });
+                    presetButtons.appendChild(button);
+                });
+            }
+        }
+
+        function convertUnits(value, fromUnit, toUnit, quantityType) {
+            if (!enableUnitConversion.checked || fromUnit === toUnit) {
+                return value;
+            }
+
+            const conversions = unitConversions[quantityType];
+            if (!conversions || !conversions[fromUnit] || !conversions[toUnit]) {
+                return value;
+            }
+
+            // Handle special temperature conversions
+            if (quantityType === 'temperature') {
+                if (conversions[fromUnit].toBase) {
+                    const celsius = conversions[fromUnit].toBase(value);
+                    if (conversions[toUnit].fromBase) {
+                        return conversions[toUnit].fromBase(celsius);
+                    } else {
+                        return celsius + (conversions[toUnit].offset || 0);
+                    }
+                } else {
+                    const celsius = value - (conversions[fromUnit].offset || 0);
+                    if (conversions[toUnit].fromBase) {
+                        return conversions[toUnit].fromBase(celsius);
+                    } else {
+                        return celsius + (conversions[toUnit].offset || 0);
                     }
                 }
-            });
+            }
 
-            // Tab buttons
-            document.getElementById('calcTab').addEventListener('click', () => showTab('calculator'));
-            document.getElementById('historyTab').addEventListener('click', () => showTab('history'));
-            document.getElementById('converterTab').addEventListener('click', () => showTab('converter'));
+            // Handle standard linear conversions
+            const fromFactor = conversions[fromUnit].factor || 1;
+            const toFactor = conversions[toUnit].factor || 1;
+            
+            return value * fromFactor / toFactor;
+        }
 
-            // Mode buttons
-            document.getElementById('directMode').addEventListener('click', () => setMode('direct'));
-            document.getElementById('inverseMode').addEventListener('click', () => setMode('inverse'));
-            document.getElementById('findScaleMode').addEventListener('click', () => setMode('find-scale'));
+        function convertScale() {
+            try {
+                const calculationType = calculationTypeSelect.value;
+                const inputMin = parseFloat(document.getElementById('inputMin').value);
+                const inputMax = parseFloat(document.getElementById('inputMax').value);
+                const outputMin = parseFloat(document.getElementById('outputMin').value);
+                
+                const inputUnit = inputUnitSelect.value;
+                const outputUnit = outputUnitSelect.value;
+                const quantityKey = physicalQuantitySelect.value;
 
-            // Preset buttons
-            document.getElementById('tempPreset').addEventListener('click', () => loadPreset('temperature'));
-            document.getElementById('pressPreset').addEventListener('click', () => loadPreset('pressure'));
-            document.getElementById('voltPreset').addEventListener('click', () => loadPreset('voltage'));
-            document.getElementById('percPreset').addEventListener('click', () => loadPreset('percentage'));
-
-            // Action buttons
-            document.getElementById('calculateBtn').addEventListener('click', calculate);
-            document.getElementById('clearBtn').addEventListener('click', clearForm);
-            document.getElementById('copyBtn').addEventListener('click', copyResult);
-            document.getElementById('saveBtn').addEventListener('click', () => saveToHistory(currentResult));
-            document.getElementById('clearHistoryBtn').addEventListener('click', clearHistory);
-            document.getElementById('exportHistoryBtn').addEventListener('click', exportHistory);
-            document.getElementById('convertBtn').addEventListener('click', convertUnits);
-
-            // Precision slider
-            document.getElementById('precision').addEventListener('input', (e) => {
-                document.getElementById('precision-value').textContent = e.target.value;
-            });
-
-            // Unit converter auto-update
-            ['convert-from', 'convert-from-unit', 'convert-to-unit'].forEach(id => {
-                const element = document.getElementById(id);
-                if (element) {
-                    element.addEventListener('input', convertUnits);
+                // Validation
+                if (inputMin >= inputMax) {
+                    throw new Error('Il valore massimo di input deve essere maggiore del minimo');
                 }
-            });
 
-            // Enter key for calculate
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' && !e.ctrlKey) {
-                    const activeTab = document.querySelector('.form-container.active');
-                    if (activeTab && activeTab.id === 'calculator') {
-                        calculate();
+                if (calculationType === 'direct') {
+                    // CONVERSIONE DIRETTA
+                    const outputMax = parseFloat(document.getElementById('outputMax').value);
+                    let inputValue = parseFloat(document.getElementById('inputValue').value);
+
+                    if (outputMin >= outputMax) {
+                        throw new Error('Il valore massimo del fondo scala deve essere maggiore del minimo');
                     }
+                    if (inputValue < inputMin || inputValue > inputMax) {
+                        throw new Error('Il valore da convertire deve essere compreso tra i valori minimo e massimo di input');
+                    }
+
+                    // Convert units if enabled and different
+                    let convertedInputMin = convertUnits(inputMin, inputUnit, outputUnit, quantityKey);
+                    let convertedInputMax = convertUnits(inputMax, inputUnit, outputUnit, quantityKey);
+                    let convertedInputValue = convertUnits(inputValue, inputUnit, outputUnit, quantityKey);
+
+                    // Use converted values if unit conversion is enabled
+                    if (enableUnitConversion.checked && inputUnit !== outputUnit) {
+                        // Linear scale conversion with unit conversion
+                        const inputRange = convertedInputMax - convertedInputMin;
+                        const outputRange = outputMax - outputMin;
+                        const normalizedInput = (convertedInputValue - convertedInputMin) / inputRange;
+                        const convertedValue = outputMin + (normalizedInput * outputRange);
+                        
+                        displayDirectResult(convertedValue, inputValue, inputUnit, outputUnit, quantityKey, true, convertedInputValue);
+                    } else {
+                        // Standard linear scale conversion
+                        const inputRange = inputMax - inputMin;
+                        const outputRange = outputMax - outputMin;
+                        const normalizedInput = (inputValue - inputMin) / inputRange;
+                        const convertedValue = outputMin + (normalizedInput * outputRange);
+                        
+                        displayDirectResult(convertedValue, inputValue, inputUnit, outputUnit, quantityKey, false);
+                    }
+
+                } else {
+                    // FORMULA INVERSA
+                    const desiredOutput = parseFloat(document.getElementById('desiredOutput').value);
+
+                    if (desiredOutput < outputMin) {
+                        throw new Error('Il valore desiderato deve essere maggiore o uguale al minimo del fondo scala');
+                    }
+
+                    // Formula inversa per calcolare il valore massimo necessario
+                    const currentOutputMax = outputMin * 2;
+                    const outputRange = currentOutputMax - outputMin;
+                    const inputRange = inputMax - inputMin;
+                    
+                    const desiredRatio = (desiredOutput - outputMin) / outputRange;
+                    const requiredInputMax = inputMin + (desiredRatio * inputRange);
+
+                    displayInverseResult(requiredInputMax, desiredOutput, inputUnit, outputUnit, quantityKey, inputMin, outputMin);
                 }
-            });
-        }
 
-        function loadTheme() {
-            document.documentElement.setAttribute('data-theme', currentTheme);
-            const toggle = document.getElementById('themeToggle');
-            if (toggle) {
-                toggle.textContent = currentTheme === 'light' ? '🌙' : '☀️';
-            }
-        }
+                hideError();
 
-        function toggleTheme() {
-            currentTheme = currentTheme === 'light' ? 'dark' : 'light';
-            localStorage.setItem('theme', currentTheme);
-            loadTheme();
-            showStatus(currentTheme === 'dark' ? 'Tema scuro 🌙' : 'Tema chiaro ☀️');
-        }
-
-        function showTab(tabName) {
-            // Hide all containers
-            document.querySelectorAll('.form-container').forEach(container => {
-                container.classList.remove('active');
-            });
-            
-            // Hide all tab buttons
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            // Show selected
-            const container = document.getElementById(tabName);
-            if (container) {
-                container.classList.add('active');
-            }
-
-            // Activate correct tab button
-            if (tabName === 'calculator') document.getElementById('calcTab').classList.add('active');
-            if (tabName === 'history') document.getElementById('historyTab').classList.add('active');
-            if (tabName === 'converter') document.getElementById('converterTab').classList.add('active');
-        }
-
-        function setMode(mode) {
-            currentMode = mode;
-            
-            // Update mode buttons
-            document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
-            if (mode === 'direct') document.getElementById('directMode').classList.add('active');
-            if (mode === 'inverse') document.getElementById('inverseMode').classList.add('active');
-            if (mode === 'find-scale') document.getElementById('findScaleMode').classList.add('active');
-            
-            // Show/hide input sections
-            document.getElementById('direct-inputs').style.display = mode === 'direct' ? 'block' : 'none';
-            document.getElementById('inverse-inputs').style.display = mode === 'inverse' ? 'block' : 'none';
-            document.getElementById('find-scale-inputs').style.display = mode === 'find-scale' ? 'block' : 'none';
-        }
-
-        function loadPreset(presetName) {
-            try {
-                const preset = presets[presetName];
-                if (!preset) return;
-
-                if (currentMode === 'direct') {
-                    document.getElementById('v_min').value = preset.v_min;
-                    document.getElementById('v_max').value = preset.v_max;
-                    document.getElementById('fondo_min').value = preset.fondo_min;
-                    document.getElementById('fondo_max').value = preset.fondo_max;
-                    document.getElementById('input-unit').value = preset.input_unit;
-                    document.getElementById('output-unit').value = preset.output_unit;
-                }
-                
-                showStatus(`Preset: ${preset.description}`);
-            } catch (error) {
-                showError('Errore caricamento preset');
-            }
-        }
-
-        function calculate() {
-            hideMessages();
-            
-            try {
-                let result;
-                
-                if (currentMode === 'direct') {
-                    result = calculateDirect();
-                } else if (currentMode === 'inverse') {
-                    result = calculateInverse();
-                } else if (currentMode === 'find-scale') {
-                    result = calculateFindScale();
-                }
-                
-                if (result) {
-                    displayResult(result);
-                    currentResult = result;
-                    if (navigator.vibrate) navigator.vibrate(50);
-                }
             } catch (error) {
                 showError(error.message);
-                console.error('Calculation error:', error);
+                hideResult();
             }
         }
 
-        function calculateDirect() {
-            const valore = parseFloat(document.getElementById('valore').value);
-            const v_min = parseFloat(document.getElementById('v_min').value);
-            const v_max = parseFloat(document.getElementById('v_max').value);
-            const fondo_min = parseFloat(document.getElementById('fondo_min').value);
-            const fondo_max = parseFloat(document.getElementById('fondo_max').value);
+        function displayDirectResult(convertedValue, originalValue, inputUnit, outputUnit, quantityKey, withUnitConversion, convertedInputValue) {
+            const quantity = physicalQuantities[quantityKey];
+            const inputUnitInfo = quantity.units[inputUnit];
+            const outputUnitInfo = quantity.units[outputUnit];
+
+            document.getElementById('resultValue').textContent = 
+                convertedValue.toFixed(3) + ' ' + outputUnitInfo.symbol;
             
-            const inputUnit = document.getElementById('input-unit').value;
-            const outputUnit = document.getElementById('output-unit').value;
-
-            if (isNaN(valore) || isNaN(v_min) || isNaN(v_max) || isNaN(fondo_min) || isNaN(fondo_max)) {
-                throw new Error('Inserisci tutti i valori numerici');
-            }
-
-            if (v_max === v_min) {
-                throw new Error('V_max deve essere diverso da V_min');
-            }
-
-            if (valore < v_min || valore > v_max) {
-                showWarning('Valore fuori range originale');
-            }
-
-            const numeratore = fondo_max - fondo_min;
-            const denominatore = v_max - v_min;
-            const risultato = (numeratore / denominatore) * (valore - v_min) + fondo_min;
-
-            return {
-                type: 'direct',
-                input: { value: valore, unit: inputUnit },
-                output: { value: risultato, unit: outputUnit },
-                ranges: { v_min, v_max, fondo_min, fondo_max },
-                formula: `X = ((${fondo_max} - ${fondo_min}) / (${v_max} - ${v_min})) × (${valore} - ${v_min}) + ${fondo_min}`
-            };
-        }
-
-        function calculateInverse() {
-            const valore_scalato = parseFloat(document.getElementById('valore_scalato').value);
-            const v_min = parseFloat(document.getElementById('v_min_inv').value);
-            const v_max = parseFloat(document.getElementById('v_max_inv').value);
-            const fondo_min = parseFloat(document.getElementById('fondo_min_inv').value);
-            const fondo_max = parseFloat(document.getElementById('fondo_max_inv').value);
-
-            if (isNaN(valore_scalato) || isNaN(v_min) || isNaN(v_max) || isNaN(fondo_min) || isNaN(fondo_max)) {
-                throw new Error('Inserisci tutti i valori numerici');
-            }
-
-            if (fondo_max === fondo_min) {
-                throw new Error('Fondo_max deve essere diverso da Fondo_min');
-            }
-
-            const valore_originale = ((valore_scalato - fondo_min) * (v_max - v_min)) / (fondo_max - fondo_min) + v_min;
-
-            return {
-                type: 'inverse',
-                input: { value: valore_scalato, unit: document.getElementById('scaled-unit').value },
-                output: { value: valore_originale, unit: '' },
-                ranges: { v_min, v_max, fondo_min, fondo_max },
-                formula: `V = ((${valore_scalato} - ${fondo_min}) × (${v_max} - ${v_min})) / (${fondo_max} - ${fondo_min}) + ${v_min}`
-            };
-        }
-
-        function calculateFindScale() {
-            const valore = parseFloat(document.getElementById('valore_find').value);
-            const valore_scalato = parseFloat(document.getElementById('valore_scalato_find').value);
-            const v_min = parseFloat(document.getElementById('v_min_find').value);
-            const v_max = parseFloat(document.getElementById('v_max_find').value);
-            const fondo_min = parseFloat(document.getElementById('fondo_min_find').value);
-
-            if (isNaN(valore) || isNaN(valore_scalato) || isNaN(v_min) || isNaN(v_max) || isNaN(fondo_min)) {
-                throw new Error('Inserisci tutti i valori numerici');
-            }
-
-            if (v_max === v_min) {
-                throw new Error('V_max deve essere diverso da V_min');
-            }
-
-            if (valore === v_min) {
-                throw new Error('Il valore non può essere uguale a V_min');
-            }
-
-            const fondo_max = ((valore_scalato - fondo_min) * (v_max - v_min)) / (valore - v_min) + fondo_min;
-
-            return {
-                type: 'find-scale',
-                input: { value: valore, unit: document.getElementById('find-input-unit').value },
-                output: { value: fondo_max, unit: document.getElementById('find-output-unit').value },
-                target: { value: valore_scalato, unit: document.getElementById('find-output-unit').value },
-                ranges: { v_min, v_max, fondo_min },
-                formula: `Fondo_max = ((${valore_scalato} - ${fondo_min}) × (${v_max} - ${v_min})) / (${valore} - ${v_min}) + ${fondo_min}`
-            };
-        }
-
-        function displayResult(result) {
-            const precision = parseInt(document.getElementById('precision').value);
-            const useScientific = document.getElementById('scientific-notation').checked;
-            const showFormula = document.getElementById('show-formula').checked;
-
-            let formattedValue;
-            if (useScientific && Math.abs(result.output.value) >= 1000) {
-                formattedValue = result.output.value.toExponential(precision);
-            } else {
-                formattedValue = result.output.value.toFixed(precision);
-            }
-
-            document.getElementById('result-title').textContent = getResultTitle(result.type);
-            document.getElementById('result-value').textContent = formattedValue;
-            document.getElementById('result-unit').textContent = result.output.unit || '';
-
-            // Show formula if requested
-            if (showFormula) {
-                document.getElementById('formula-text').textContent = result.formula;
-                document.getElementById('formula-display').style.display = 'block';
-            } else {
-                document.getElementById('formula-display').style.display = 'none';
-            }
-
-            // Color code result based on range
-            const resultCard = document.getElementById('result-card');
-            if (result.type === 'direct' && result.ranges && 
-                (result.output.value < result.ranges.fondo_min || result.output.value > result.ranges.fondo_max)) {
-                resultCard.className = 'result-card warning';
-            } else {
-                resultCard.className = 'result-card';
-            }
-
-            document.getElementById('result-container').classList.add('show');
-        }
-
-        function getResultTitle(type) {
-            switch (type) {
-                case 'direct': return 'Valore Scalato:';
-                case 'inverse': return 'Valore Originale:';
-                case 'find-scale': return 'Scala Massima:';
-                default: return 'Risultato:';
-            }
-        }
-
-        function copyResult() {
-            if (!currentResult) {
-                showError('Nessun risultato da copiare');
-                return;
-            }
-
-            try {
-                const text = `${currentResult.output.value.toFixed(3)} ${currentResult.output.unit}`;
-                if (navigator.clipboard && navigator.clipboard.writeText) {
-                    navigator.clipboard.writeText(text).then(() => {
-                        showSuccess('Copiato negli appunti! 📋');
-                    }).catch(() => {
-                        showError('Impossibile copiare');
-                    });
-                } else {
-                    showError('Copia non supportata');
-                }
-            } catch (error) {
-                showError('Errore durante la copia');
-            }
-        }
-
-        function saveToHistory(result) {
-            if (!result) return;
+            let detailsText = originalValue + ' ' + inputUnitInfo.symbol + ' → ' + convertedValue.toFixed(3) + ' ' + outputUnitInfo.symbol;
             
-            try {
-                const historyItem = {
-                    ...result,
-                    timestamp: Date.now(),
-                    id: Date.now()
-                };
-
-                calculationHistory.unshift(historyItem);
-                if (calculationHistory.length > 50) {
-                    calculationHistory = calculationHistory.slice(0, 50);
-                }
-
-                localStorage.setItem('calculationHistory', JSON.stringify(calculationHistory));
-                updateHistoryDisplay();
-                showSuccess('Salvato in cronologia! 💾');
-            } catch (error) {
-                console.error('History save error:', error);
-                showError('Errore salvando in cronologia');
+            if (withUnitConversion && convertedInputValue !== null) {
+                detailsText += '\n(' + originalValue + ' ' + inputUnitInfo.symbol + ' = ' + convertedInputValue.toFixed(3) + ' ' + outputUnitInfo.symbol + ')';
             }
+            
+            document.getElementById('resultDetails').textContent = detailsText;
+
+            const unitConversionText = withUnitConversion ? 
+                '<br><span style="color: #10b981;">✅ Conversione unità di misura applicata</span>' : '';
+
+            document.getElementById('unitInfo').innerHTML = 
+                '<strong>Conversione Diretta - ' + quantity.name + '</strong><br>' +
+                'Da: ' + inputUnitInfo.name + '<br>' +
+                'A: ' + outputUnitInfo.name + '<br>' +
+                'Scala input: ' + document.getElementById('inputMin').value + ' - ' + document.getElementById('inputMax').value + ' ' + inputUnitInfo.symbol + '<br>' +
+                'Fondo scala: ' + document.getElementById('outputMin').value + ' - ' + document.getElementById('outputMax').value + ' ' + outputUnitInfo.symbol +
+                unitConversionText;
+
+            // Add to history
+            addToHistory({
+                type: 'Conversione Diretta',
+                quantity: quantity.name,
+                result: convertedValue.toFixed(3) + ' ' + outputUnitInfo.symbol,
+                details: detailsText,
+                unitConversion: withUnitConversion
+            });
+
+            resultSection.style.display = 'block';
+        }
+
+        function displayInverseResult(requiredInputMax, desiredOutput, inputUnit, outputUnit, quantityKey, inputMin, outputMin) {
+            const quantity = physicalQuantities[quantityKey];
+            const inputUnitInfo = quantity.units[inputUnit];
+            const outputUnitInfo = quantity.units[outputUnit];
+
+            document.getElementById('resultValue').textContent = 
+                requiredInputMax.toFixed(3) + ' ' + inputUnitInfo.symbol;
+            
+            document.getElementById('resultDetails').textContent = 
+                'Valore Massimo Necessario: ' + requiredInputMax.toFixed(3) + ' ' + inputUnitInfo.symbol;
+
+            document.getElementById('unitInfo').innerHTML = 
+                '<strong>Formula Inversa - ' + quantity.name + '</strong><br>' +
+                '<div style="margin: 10px 0; padding: 10px; background: rgba(255,255,255,0.2); border-radius: 8px;">' +
+                    '<strong>📊 Risultato:</strong><br>' +
+                    'Per ottenere <strong>' + desiredOutput + ' ' + outputUnitInfo.symbol + '</strong> sul fondo scala,<br>' +
+                    'il valore massimo della scala di input deve essere: <strong>' + requiredInputMax.toFixed(3) + ' ' + inputUnitInfo.symbol + '</strong>' +
+                '</div>' +
+                '<strong>Parametri utilizzati:</strong><br>' +
+                'Scala input: ' + inputMin + ' - ' + requiredInputMax.toFixed(3) + ' ' + inputUnitInfo.symbol + '<br>' +
+                'Fondo scala minimo: ' + outputMin + ' ' + outputUnitInfo.symbol + '<br>' +
+                'Valore desiderato: ' + desiredOutput + ' ' + outputUnitInfo.symbol;
+
+            // Add to history
+            addToHistory({
+                type: 'Formula Inversa',
+                quantity: quantity.name,
+                result: requiredInputMax.toFixed(3) + ' ' + inputUnitInfo.symbol,
+                details: 'Per ottenere ' + desiredOutput + ' ' + outputUnitInfo.symbol + ', serve max: ' + requiredInputMax.toFixed(3) + ' ' + inputUnitInfo.symbol
+            });
+
+            resultSection.style.display = 'block';
+        }
+
+        function addToHistory(calculation) {
+            if (!enableHistory.checked) return;
+            
+            const historyItem = {
+                id: Date.now(),
+                timestamp: new Date().toLocaleString('it-IT'),
+                type: calculation.type,
+                quantity: calculation.quantity,
+                result: calculation.result,
+                details: calculation.details
+            };
+            
+            calculationHistory.unshift(historyItem);
+            
+            // Keep only last 50 calculations
+            if (calculationHistory.length > 50) {
+                calculationHistory = calculationHistory.slice(0, 50);
+            }
+            
+            localStorage.setItem('scaleConverterHistory', JSON.stringify(calculationHistory));
+            updateHistoryDisplay();
         }
 
         function updateHistoryDisplay() {
-            const historyList = document.getElementById('history-list');
-            
             if (calculationHistory.length === 0) {
-                historyList.innerHTML = '<p style="text-align: center; color: var(--text-light); padding: 40px;">📭 Nessun calcolo salvato</p>';
+                historyList.innerHTML = '<div class="history-empty">Nessun calcolo nella cronologia</div>';
                 return;
             }
 
-            historyList.innerHTML = calculationHistory.slice(0, 10).map(item => `
-                <div class="history-item">
-                    <div class="timestamp">${new Date(item.timestamp).toLocaleString('it-IT')}</div>
-                    <div class="calculation">
-                        ${getResultTitle(item.type)} ${item.output.value.toFixed(3)} ${item.output.unit || ''}
-                        <br><small>Input: ${item.input.value} ${item.input.unit || ''}</small>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function clearHistory() {
-            if (confirm('Cancellare tutta la cronologia?')) {
-                try {
-                    calculationHistory = [];
-                    localStorage.removeItem('calculationHistory');
-                    updateHistoryDisplay();
-                    showSuccess('Cronologia cancellata! 🗑️');
-                } catch (error) {
-                    showError('Errore cancellazione cronologia');
-                }
-            }
-        }
-
-        function exportHistory() {
-            if (calculationHistory.length === 0) {
-                showError('Nessuna cronologia da esportare');
-                return;
-            }
-
-            try {
-                const csvData = 'Tipo,Valore Input,Unità Input,Valore Output,Unità Output,Data\n' +
-                    calculationHistory.map(item => 
-                        `${item.type},${item.input.value},${item.input.unit || ''},${item.output.value},${item.output.unit || ''},${new Date(item.timestamp).toLocaleString('it-IT')}`
-                    ).join('\n');
-
-                downloadFile(csvData, 'cronologia-calcoli.csv', 'text/csv');
-            } catch (error) {
-                showError('Errore esportazione cronologia');
-            }
-        }
-
-        function downloadFile(content, filename, mimeType) {
-            try {
-                const blob = new Blob([content], { type: mimeType });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = filename;
-                a.style.display = 'none';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-                showSuccess('File scaricato! 💾');
-            } catch (error) {
-                console.error('Download error:', error);
-                showError('Errore durante il download');
-            }
-        }
-
-        function convertUnits() {
-            try {
-                const fromValue = parseFloat(document.getElementById('convert-from').value);
-                const fromUnit = document.getElementById('convert-from-unit').value;
-                const toUnit = document.getElementById('convert-to-unit').value;
-                const resultDiv = document.getElementById('conversion-result');
-
-                if (isNaN(fromValue)) {
-                    document.getElementById('convert-to').value = '';
-                    if (resultDiv) resultDiv.style.display = 'none';
-                    return;
-                }
-
-                if (fromUnit === toUnit) {
-                    document.getElementById('convert-to').value = fromValue.toFixed(6);
-                    if (resultDiv) {
-                        resultDiv.innerHTML = `<strong>${fromValue} ${getUnitSymbol(fromUnit)} = ${fromValue} ${getUnitSymbol(toUnit)}</strong>`;
-                        resultDiv.style.display = 'block';
-                    }
-                    return;
-                }
-
-                let result;
-                if (unitConversions[fromUnit] && unitConversions[fromUnit][toUnit]) {
-                    result = unitConversions[fromUnit][toUnit](fromValue);
-                } else {
-                    throw new Error('Conversione non supportata');
-                }
-
-                document.getElementById('convert-to').value = result.toFixed(6);
-                if (resultDiv) {
-                    resultDiv.innerHTML = `<strong>${fromValue} ${getUnitSymbol(fromUnit)} = ${result.toFixed(6)} ${getUnitSymbol(toUnit)}</strong>`;
-                    resultDiv.style.display = 'block';
-                }
-            } catch (error) {
-                showError('Conversione non supportata: ' + error.message);
-            }
-        }
-
-        function getUnitSymbol(unit) {
-            const symbols = {
-                celsius: '°C', kelvin: 'K', fahrenheit: '°F',
-                pascal: 'Pa', bar: 'bar', psi: 'psi'
-            };
-            return symbols[unit] || unit;
-        }
-
-        function clearForm() {
-            try {
-                document.querySelectorAll('input[type="number"]').forEach(input => input.value = '');
-                document.querySelectorAll('select').forEach(select => select.selectedIndex = 0);
-                hideMessages();
-                const resultContainer = document.getElementById('result-container');
-                if (resultContainer) {
-                    resultContainer.classList.remove('show');
-                }
-                currentResult = null;
-                showStatus('Campi cancellati 🧹');
-            } catch (error) {
-                showError('Errore cancellazione campi');
-            }
-        }
-
-        function hideMessages() {
-            ['error', 'warning', 'success'].forEach(id => {
-                const element = document.getElementById(id);
-                if (element) element.style.display = 'none';
-            });
+            historyList.innerHTML = calculationHistory.map(function(item) {
+                return '<div class="history-item">' +
+                    '<div class="history-timestamp">' + item.timestamp + '</div>' +
+                    '<div class="history-content">' +
+                        '<div class="history-result">' + item.result + '</div>' +
+                        '<div class="history-details">' + item.details + '</div>' +
+                        '<div style="font-size: 0.8em; color: #9ca3af; margin-top: 5px;">' +
+                            item.type + ' • ' + item.quantity +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
+            }).join('');
         }
 
         function showError(message) {
-            const element = document.getElementById('error');
-            if (element) {
-                element.textContent = message;
-                element.style.display = 'block';
-            }
-            if (navigator.vibrate) navigator.vibrate([100, 50, 100]);
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
         }
 
-        function showWarning(message) {
-            const element = document.getElementById('warning');
-            if (element) {
-                element.textContent = message;
-                element.style.display = 'block';
-            }
+        function hideError() {
+            errorDiv.style.display = 'none';
         }
 
-        function showSuccess(message) {
-            const element = document.getElementById('success');
-            if (element) {
-                element.textContent = message;
-                element.style.display = 'block';
-                setTimeout(() => element.style.display = 'none', 3000);
-            }
+        function hideResult() {
+            resultSection.style.display = 'none';
         }
 
-        function showStatus(message) {
-            const statusText = document.getElementById('statusText');
-            const statusBar = document.getElementById('statusBar');
+        // PWA Install prompt
+        let deferredPrompt;
+        
+        window.addEventListener('beforeinstallprompt', function(e) {
+            e.preventDefault();
+            deferredPrompt = e;
             
-            if (statusText && statusBar) {
-                statusText.textContent = message;
-                statusBar.classList.add('show');
-                setTimeout(() => statusBar.classList.remove('show'), 3000);
-            }
-        }
-
-        function restoreSession() {
-            try {
-                // Set default values first
-                if (!document.getElementById('v_min').value) document.getElementById('v_min').value = '0';
-                if (!document.getElementById('v_max').value) document.getElementById('v_max').value = '100';
-                if (!document.getElementById('fondo_min').value) document.getElementById('fondo_min').value = '4';
-                if (!document.getElementById('fondo_max').value) document.getElementById('fondo_max').value = '20';
-
-                // Try to restore session
-                const session = localStorage.getItem('lastSession');
-                if (session) {
-                    const data = JSON.parse(session);
-                    const timeDiff = Date.now() - data.timestamp;
-                    
-                    if (timeDiff < 24 * 60 * 60 * 1000) { // 24 hours
-                        Object.entries(data.values).forEach(([id, value]) => {
-                            const element = document.getElementById(id);
-                            if (element) element.value = value;
-                        });
-                        showStatus('Sessione ripristinata 🔄');
+            const installBanner = document.createElement('div');
+            installBanner.style.cssText = 
+                'position: fixed; top: 10px; left: 50%; transform: translateX(-50%); ' +
+                'background: #10b981; color: white; padding: 10px 20px; border-radius: 25px; ' +
+                'box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1000; cursor: pointer; ' +
+                'font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 8px;';
+            installBanner.innerHTML = '📱 Installa l\'app sul tuo dispositivo';
+            
+            installBanner.addEventListener('click', function() {
+                installBanner.remove();
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then(function(choiceResult) {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('App installata');
                     }
+                    deferredPrompt = null;
+                });
+            });
+            
+            document.body.appendChild(installBanner);
+            
+            setTimeout(function() {
+                if (installBanner.parentNode) {
+                    installBanner.remove();
                 }
+            }, 10000);
+        });
 
-                updateHistoryDisplay();
-            } catch (error) {
-                console.log('Session restore error:', error);
-            }
-        }
-
-        // Auto-save session
-        function saveSession() {
-            try {
-                const values = {};
-                document.querySelectorAll('input[type="number"], select').forEach(element => {
-                    if (element.value) values[element.id] = element.value;
-                });
-
-                localStorage.setItem('lastSession', JSON.stringify({
-                    values,
-                    timestamp: Date.now()
-                }));
-            } catch (error) {
-                console.log('Session save error:', error);
-            }
-        }
-
-        function debounce(func, wait) {
-            let timeout;
-            return function executedFunction(...args) {
-                const later = () => {
-                    clearTimeout(timeout);
-                    func(...args);
-                };
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-            };
-        }
-
-        // Initialize when page loads
-        window.addEventListener('DOMContentLoaded', function() {
-            try {
-                initApp();
-                
-                // Setup auto-save with debounce
-                const debouncedSave = debounce(saveSession, 1000);
-                document.addEventListener('input', debouncedSave);
-                
-                // Network status
-                window.addEventListener('online', () => showStatus('Online 🌐'));
-                window.addEventListener('offline', () => showStatus('Offline 📴'));
-
-                // Prevent zoom on iOS
-                document.addEventListener('gesturestart', e => e.preventDefault());
-
-                // App installed
-                window.addEventListener('appinstalled', () => {
-                    showStatus('App installata! 📱');
-                    const installBtn = document.getElementById('installButton');
-                    if (installBtn) installBtn.style.display = 'none';
-                });
-
-                console.log('📊 Scala Calculator Pro v2.0 caricato con successo');
-                
-                // Show initial status
-                setTimeout(() => {
-                    showStatus('Pronto per l\'uso! 🚀');
-                }, 1000);
-
-                // iOS install hint
-                setTimeout(() => {
-                    if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream && !isStandalone) {
-                        showStatus('💡 Per installare: Condividi > Aggiungi alla Home');
-                    }
-                }, 5000);
-
-            } catch (error) {
-                console.error('DOMContentLoaded error:', error);
-            }
+        window.addEventListener('appinstalled', function(evt) {
+            console.log('App installata con successo');
         });
     </script>
 </body>
